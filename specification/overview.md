@@ -250,7 +250,7 @@ The OpenTelemetry service has two primary modes of operation: Agent (a locally
 running daemon) and Collector (a standalone running service).
 
 Read more at OpenTelemetry Service [Long-term
-Vision](https://github.com/open-telemetry/opentelemetry-service/blob/master/docs/VISION.md).
+Vision](https://github.com/open-telemetry/opentelemetry-service/blob/master/docs/vision.md).
 
 ## Instrumentation adapters
 
