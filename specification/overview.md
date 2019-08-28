@@ -100,7 +100,7 @@ multiple parents, each representing a single incoming item being processed in
 the batch. Another example of using a **Link** is to declare relationship
 between originating and restarted **Trace**. This can be used when **Trace**
 enters trusted boundaries of an service and service policy requires to generate
-a new **Trace** instead of trusting incoming **Trace** context. 
+a new **Trace** instead of trusting incoming **Trace** context.
 
 ## Metrics
 
