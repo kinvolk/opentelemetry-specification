@@ -54,8 +54,8 @@ Temporal relationships between Spans in a single Trace
 
 Each **Span** encapsulates the following state:
 
-- An operation name
-- A start and finish timestamp
+- An operation name.
+- A start and finish timestamp.
 - A set of zero or more key:value **Attributes**. The keys must be strings. The
   values may be strings, bools, or numeric types.
 - A set of zero or more **Events**, each of which is itself a key:value map
