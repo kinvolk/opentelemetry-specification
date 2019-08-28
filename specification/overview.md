@@ -79,7 +79,7 @@ propagated from parent to child **Spans**.
   all processes.
 - **SpanId** is the identifier for a span. It is globally unique with
   practically sufficient probability by being made as 8 randomly generated
-  bytes. When passed to a child Span this identifier becomes the parent span id
+  bytes. When passed to a child Span this identifier becomes the parent span ID
   for the child **Span**.
 - **TraceOptions** represents the options for a trace. It is represented as 1
   byte (bitmap).
@@ -87,7 +87,7 @@ propagated from parent to child **Spans**.
     `0x1`).
 - **Tracestate** carries tracing-system specific context in a list of key value
   pairs. **Tracestate** allows different vendors to propagate additional
-  information and interoperate with their legacy Id formats. For more details
+  information and interoperate with their legacy ID formats. For more details
   see [this](https://w3c.github.io/trace-context/#tracestate-field).
 
 ### Links between spans
