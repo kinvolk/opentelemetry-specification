@@ -23,7 +23,7 @@ For example, the following is an example **Trace** made up of 8 **Spans**:
 Causal relationships between Spans in a single Trace
 
 
-        [Span A]  ←←←(the root span)
+        [Span A]  ←←←(the root Span)
             |
      +------+------+
      |             |
@@ -69,20 +69,20 @@ Each **Span** encapsulates the following state:
 ### SpanContext
 
 Represents all the information that identifies **Span** in the **Trace** and
-MUST be propagated to child Spans and across process boundaries. A
+MUST be propagated to child **Spans** and across process boundaries. A
 **SpanContext** contains the tracing identifiers and the options that are
 propagated from parent to child **Spans**.
 
-- **TraceId** is the identifier for a trace. It is worldwide unique with
+- **TraceId** is the identifier for a **Trace**. It is worldwide unique with
   practically sufficient probability by being made as 16 randomly generated
-  bytes. TraceId is used to group all spans for a specific trace together across
-  all processes.
-- **SpanId** is the identifier for a span. It is globally unique with
+  bytes. TraceId is used to group all **Spans** for a specific **Trace**
+  together across all processes.
+- **SpanId** is the identifier for a **Span**. It is globally unique with
   practically sufficient probability by being made as 8 randomly generated
-  bytes. When passed to a child Span this identifier becomes the parent span ID
-  for the child **Span**.
-- **TraceOptions** represents the options for a trace. It is represented as 1
-  byte (bitmap).
+  bytes. When passed to a child **Span** this identifier becomes the parent
+  **Span** ID for the child **Span**.
+- **TraceOptions** represents the options for a **Trace**. It is represented as
+  1 byte (bitmap).
   - Sampling bit -  Bit to represent whether trace is sampled or not (mask
     `0x1`).
 - **Tracestate** carries tracing-system specific context in a list of key value
@@ -98,9 +98,9 @@ A **Span** may be linked to zero or more other **Spans** (defined by
 **Links** can be used to represent batched operations where a **Span** has
 multiple parents, each representing a single incoming item being processed in
 the batch. Another example of using a **Link** is to declare relationship
-between originating and restarted trace. This can be used when **Trace** enters
-trusted boundaries of an service and service policy requires to generate a new
-Trace instead of trusting incoming Trace context. 
+between originating and restarted **Trace**. This can be used when **Trace**
+enters trusted boundaries of an service and service policy requires to generate
+a new **Trace** instead of trusting incoming **Trace** context. 
 
 ## Metrics
 
