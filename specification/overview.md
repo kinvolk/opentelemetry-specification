@@ -86,7 +86,7 @@ propagated from parent to child **Spans**.
   - Sampling bit -  Bit to represent whether trace is sampled or not (mask
     `0x1`).
 - **Tracestate** carries tracing-system specific context in a list of key value
-  pairs. **Tracestate** allows different vendors propagate additional
+  pairs. **Tracestate** allows different vendors to propagate additional
   information and inter-operate with their legacy Id formats. For more details
   see [this](https://w3c.github.io/trace-context/#tracestate-field).
 
