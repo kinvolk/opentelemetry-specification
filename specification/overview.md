@@ -82,7 +82,7 @@ propagated from parent to child **Spans**.
   bytes. When passed to a child **Span** this identifier becomes the parent
   **Span** ID for the child **Span**.
 - **TraceOptions** represents the options for a **Trace**. It is represented as
-  1 byte (bitmap).
+  a 1-byte bitmap.
   - Sampling bit -  Bit to represent whether trace is sampled or not (mask
     `0x1`).
 - **Tracestate** carries tracing-system specific context in a list of key value
@@ -97,10 +97,11 @@ A **Span** may be linked to zero or more other **Spans** (defined by
 **SpanContexts** inside a single **Trace** or across different **Traces**.
 **Links** can be used to represent batched operations where a **Span** has
 multiple parents, each representing a single incoming item being processed in
-the batch. Another example of using a **Link** is to declare relationship
-between originating and restarted **Trace**. This can be used when **Trace**
-enters trusted boundaries of an service and service policy requires to generate
-a new **Trace** instead of trusting incoming **Trace** context.
+the batch. Another example of using a **Link** is to declare a relationship
+between an originating and a restarted **Trace**. This can be used when a
+**Trace** enters the trusted boundaries of a service and the service's policy
+requires that a new **Trace** be generated instead of trusting the incoming
+**Trace**'s context.
 
 ## Metrics
 
